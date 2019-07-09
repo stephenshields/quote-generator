@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+    <meta name="author" content="Stephen Shields">
+    <meta name="description" content="Quote generator">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body class="yellow-background" id="background">
+	<div class="row">
+		<div class="col-5">
+    <h1 class="text-right mt-4 text-light" id="inspo">Inspirational Quotes</h1>
+</div>
+<div class="col-2">
+            <label class="switch mt-4 text-center">
+                <input type="checkbox" id="switch" onclick="quoteType();">
+                <span class="slider round"></span>
+            </label>
+        </div>
+<div class="col-5">
+    <h1 class="text-left mt-4 text-dark" id="fact">Factual Quotes</h1>
+</div>
+</div>
+    <div class="box-space">
+        <div class="box">
+            <i class="fa fa-quote-left fa2" aria-hidden="true"></i>
+            <div class="text">
+                <i class="fa fa-quote-right fa1" aria-hidden="true"></i>
+                <div>
+                    <blockquote class="blockquote" id="quote-container">
+                        <p class="mb-0" id="quote">"aim for happiness and you can do anything!"</p>
+                        <footer class="blockquote-footer text-right" id="author">Some guy </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-2 col-5 text-center mb-5">
+        	<a class="btn btn-dark btn-lg" onclick="displayQuote();" href="" role="button">Generate new quote!</a>
+        	<a class="btn btn-lg text-dark" href="index.html" role="button">exit</a>
+        </div>
+        <div class="col-2 text-center mb-5">
+        	<p class="mt-0 mb-0 text-light">Select number of quotes?</p>
+        	 <select class="mdb-select md-form mt-2 mb-4 initialized" onchange="getQuoteNum();" id="select">
+                                <option value="1" disabled selected>How many quotes?</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
