@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <title>Quote Generator</title>
     <meta name="author" content="Stephen Shields">
     <meta name="description" content="Quote generator">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -18,7 +18,7 @@
     <h1 class="text-right mt-4 text-light" id="inspo">Inspirational Quotes</h1>
 </div>
 <div class="col-2">
-            <label class="switch mt-4 text-center">
+            <label class="switch text-center">
                 <input type="checkbox" id="switch" onclick="quoteType();">
                 <span class="slider round"></span>
             </label>
@@ -42,13 +42,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="offset-2 col-5 text-center mb-5">
+        <div class="offset-3 col-3 text-center mb-5">
         	<a class="btn btn-dark btn-lg" onclick="displayQuote();" href="" role="button">Generate new quote!</a>
         	<a class="btn btn-lg text-dark" href="index.html" role="button">exit</a>
         </div>
-        <div class="col-2 text-center mb-5">
+        <div class="col-3 text-center mb-5">
         	<p class="mt-0 mb-0 text-light">Select number of quotes?</p>
-        	 <select class="mdb-select md-form mt-2 mb-4 initialized" onchange="getQuoteNum();" id="select">
+        	 <select class="mdb-select md-form mt-0 mb-4 initialized" onchange="getQuoteNum();" id="select">
                                 <option value="1" disabled selected>How many quotes?</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>

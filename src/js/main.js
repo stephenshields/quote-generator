@@ -1,46 +1,21 @@
-//TYPE 1
-
-//beginning sentence array
-var inspoArrayB = ['aim for happiness and ', 'Keep growing, ', 'believe that ', 'together, ', 'with hard work '];
-
-//middle sentence array
-var inspoArrayM = ['you ', 'it ', 'things ', 'we ', 'your dreams '];
-
-//end sentence array
-var inspoArrayE = ['will be happy!', 'will stay young.', 'can make sense.', 'can do anything!', 'make mountains.'];
-
-
-//TYPE 2
-
-//beginning sentence array
-var factArrayB = ['8 out of 10 ', 'on a full moon, ', 'Nearly all ', 'most ', '10 percent of ']
-
-//middle sentence array
-var factArrayM = ['cats ', 'monsters ', 'Amreicans ', 'home owners ', 'unused furniture ']
-
-//end sentence array
-var factArrayE = ['get hit by cars.', 'grows faster than usual.', 'can smell fear.', 'cant spell mississippi.', 'are millionaires.']
-
-
-//authors array
-var authors = ['Yo Momma', 'Me', 'Some guy']
+//global variables
 var quote = "";
 var author = "";
 var value = 1;
 var quotes = "";
 
-// var xmlhttp = new XMLHttpRequest();
-//     xmlhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
+// Retrieving data from json file
+var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
 
-//             var response = JSON.parse(xmlhttp.responseText);
-//             quotes = response.quotes;
-//         }
-//     };
-//     xmlhttp.open("GET", "js/quotes.json", true);
-//     xmlhttp.send();
+            var response = JSON.parse(xmlhttp.responseText);
+            quotes = response.quotes;
+        }
+    };
 
-//     console.log(quotes);
+    xmlhttp.open("GET", "/js/quotes.json", true);
+    xmlhttp.send();
 
 function createQuote(b, m, e, a) {
 
@@ -55,9 +30,9 @@ function createQuote(b, m, e, a) {
     var end = e[eNum];
     author = a[aNum];
 
+//assembles quote
     quote = '"' + beginning + middle + end + '"';
 
-    console.log(quote + '\n' + '-' + author);
     return quote;
     return author;
 }
@@ -68,19 +43,20 @@ function displayQuote() {
 
 	$(".blockquote").children().remove();
 
+//loop which checks which quote type is selected and displays the amount selected
 	for (var i = 0; i < value; i++) {
 	
     var check = document.getElementById("switch");
     var newQuote = "";
     if (check.checked == true) {
-        newQuote = createQuote(factArrayB, factArrayM, factArrayE, authors);
+        newQuote = createQuote(quotes[1].beginning, quotes[1].middle, quotes[1].end, quotes[2].authors);
     } else {
-        newQuote = createQuote(inspoArrayB, inspoArrayM, inspoArrayE, authors);
+        newQuote = createQuote(quotes[0].beginning, quotes[0].middle, quotes[0].end, quotes[2].authors);
     }
   
+//displaying quotes
     $(".blockquote").append(
 
-        //'<p class="mb-0" id="quote" '+' i>'+"aim for happiness and you can do anything!"+'</p>' +
         "<p class='mb-0' id='quote"+i+"'>" + '\"aim for happiness\"' + "</p>" +
         "<footer class='blockquote-footer text-right' id='author"+i+"'>Some guy </footer>"
     )
@@ -88,13 +64,13 @@ function displayQuote() {
 	 var authorId = "author" + i;
      document.getElementById(quoteId.toString()).innerHTML = newQuote;
      document.getElementById(authorId.toString()).innerHTML = author;
-     console.log(value);
  }
 }
 
 function quoteType() {
 	$(".blockquote").children().remove();
 
+//changing the css when the quote type is changed
     var check = document.getElementById("switch");
     var inspo = document.getElementById("inspo");
     var fact = document.getElementById("fact");
@@ -110,7 +86,6 @@ function quoteType() {
         // changing background to blue
         bg.classList.remove("yellow-background");
         bg.classList.add("blue-background");
-        displayQuote();
     } else {
         //changing "inspirational quote" color to light
         inspo.classList.remove("text-dark");
@@ -121,13 +96,12 @@ function quoteType() {
         // changing background to yellow
         bg.classList.remove("blue-background");
         bg.classList.add("yellow-background");
-         displayQuote();
     }
 }
 
 function getQuoteNum() {
+	//retriving the amount of quotes selected
     var getVal = document.getElementById("select");
-
     var val = getVal.options[getVal.selectedIndex].value;
     value = parseInt(val);
     displayQuote();

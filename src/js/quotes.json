@@ -13,6 +13,11 @@
             "middle": ["cats ", "monsters ", "Amreicans ", "home owners ", "unused furniture "],
             "end": ["get hit by cars.", "grows faster than usual.", "can smell fear.", "cant spell mississippi.", "are millionaires."]
 
+        },
+
+        {
+            "authors": ["Me ", "Gandhi ", "Santa Claus", "Not Sure Who Said This One", "Some Guy"]
+            
         }
     ]
 }
