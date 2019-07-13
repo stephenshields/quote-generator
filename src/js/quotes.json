@@ -2,22 +2,22 @@
 
     "quotes": [
         {
-            "beginning": ["aim for happiness and ", "Keep growing, ", "believe that ", "together, ", "with hard work "],
-            "middle": ["you ", "it ", "things ", "we ", "your dreams "],
-            "end": ["will be happy!", "will stay young.", "can make sense.", "can do anything!", "make mountains."]
+            "beginning": ["aim for happiness and ", "Keep growing, ", "believe that ", "together, ", "with hard work ", "If you believe "],
+            "middle": ["you ", "your friends ", "things ", "we ", "your dreams ", "God ", "Love "],
+            "end": ["will be happy!", "will stay young.", "can make sense.", "can do anything!", "make mountains.", "will be your success"]
 
         },
 
         {
-            "beginning": ["8 out of 10 ", "on a full moon, ", "Nearly all ", "most ", "10 percent of "],
-            "middle": ["cats ", "monsters ", "Amreicans ", "home owners ", "unused furniture "],
-            "end": ["get hit by cars.", "grows faster than usual.", "can smell fear.", "cant spell mississippi.", "are millionaires."]
+            "beginning": ["8 out of 10 ", "on a full moon, ", "Nearly all ", "most ", "10 percent of ", "Less than half of ", "Between 6am and 7:45am "],
+            "middle": ["cats ", "monsters ", "Amreicans ", "home owners ", "unused furniture ", "Office workers "],
+            "end": ["get hit by cars.", "grows faster than usual.", "can smell fear.", "cant spell mississippi.", "are millionaires.", "are afraid of babies."]
 
         },
 
         {
-            "authors": ["Me ", "Gandhi ", "Santa Claus", "Not Sure Who Said This One", "Some Guy"]
-            
+            "authors": ["Me ", "Gandhi ", "Santa Claus", "Not Sure Who Said This One", "Some Guy", "Albert Einstein", "Jon Snow"]
+
         }
     ]
 }
